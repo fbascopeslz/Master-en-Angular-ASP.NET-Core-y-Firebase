@@ -1,0 +1,7 @@
+<h1>My favourite books</h1>
+<form (ngSubmit)="saveBook(f)" #f="ngForm">
+    <input type="text" name="bookName" ngModel required>
+    <button type="submit">Add book</button>
+</form>
+
+<app-book (bookClicked)="deleteBook(book)" *ngFor="let book of books" [bookTitle]="book"></app-book>

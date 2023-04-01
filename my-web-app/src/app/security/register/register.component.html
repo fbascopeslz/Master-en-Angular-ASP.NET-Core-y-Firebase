@@ -1,0 +1,84 @@
+<section>
+  <form
+    fxLayout="column"
+    fxLayoutAlign="center center"
+    #f="ngForm"
+    (ngSubmit)="registerUser(f)"
+    fxLayoutGap="10px"
+  >
+    <mat-form-field>
+      <mat-label>Enter the name</mat-label>
+      <input
+        type="text"
+        ngModel
+        name="name"
+        required
+        placeholder="Input name"
+        matInput
+      />
+      <mat-error>You must enter a name</mat-error>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Enter the last name</mat-label>
+      <input
+        type="text"
+        ngModel
+        name="lastname"
+        required
+        placeholder="Input last name"
+        matInput
+      />
+      <mat-error>You must enter the lastname</mat-error>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Enter the username</mat-label>
+      <input
+        type="text"
+        ngModel
+        name="username"
+        required
+        placeholder="Input username"
+        matInput
+      />
+      <mat-error>You must enter the username</mat-error>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Enter the email</mat-label>
+      <input
+        type="email"
+        matInput
+        placeholder="example@email.com"
+        ngModel
+        name="email"
+        email
+        required
+        #emailInput="ngModel"
+      />
+      <mat-error *ngIf="emailInput.hasError('required')"
+        >Email cannot be blank</mat-error
+      >
+      <mat-error *ngIf="!emailInput.hasError('required')"
+        >Email is invalid</mat-error
+      >
+    </mat-form-field>
+
+    <mat-form-field hintLabel="Password must be 7 characters">
+      <mat-label>Enter the password</mat-label>
+      <input
+        type="password"
+        matInput
+        placeholder="Password"
+        ngModel
+        name="password"
+        required
+        minlength="7"
+      />
+      <mat-error>Password must have more than 7 characters</mat-error>
+    </mat-form-field>
+
+    <button type="submit" mat-raised-button color="primary" [disabled]="f.invalid">Save</button>
+  </form>
+</section>
