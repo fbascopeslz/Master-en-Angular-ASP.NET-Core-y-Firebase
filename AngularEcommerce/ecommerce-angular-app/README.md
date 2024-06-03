@@ -25,3 +25,33 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+## Configure Enviroment variables
+
+src\environments\environment.ts
+src\environments\environment.development.ts
+
+```js
+export const environment = {
+    production: false,
+    name: 'dev',
+    firebase: {
+        config: {
+            apiKey: "XXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+            authDomain: "XXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+            projectId: "XXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+            storageBucket: "XXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+            messagingSenderId: "XXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+            appId: "XXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+        }
+    }
+};
+```
+
+## Add
+
+`ng g c component_name --module app.module`
+
+## Add
+
+`ng g module module_name`
