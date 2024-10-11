@@ -48,10 +48,10 @@ export const environment = {
 };
 ```
 
-## Add
+## Add component
 
 `ng g c component_name --module app.module`
 
-## Add
+## Add module
 
 `ng g module module_name`

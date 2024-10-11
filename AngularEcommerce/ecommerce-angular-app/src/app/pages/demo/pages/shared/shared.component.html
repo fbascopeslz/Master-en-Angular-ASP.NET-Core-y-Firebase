@@ -1,3 +1,6 @@
-<p>shared works!</p>
+<h2>Angular Forms</h2>
 
-<app-button>Test Button</app-button>
+<app-button (click)="onPatchValue()">Add text</app-button>
+<form [formGroup]="form" novalidate autocomplete="off" (ngSubmit)="onSubmit()">
+    <app-input formControlName="input"></app-input>
+</form>
