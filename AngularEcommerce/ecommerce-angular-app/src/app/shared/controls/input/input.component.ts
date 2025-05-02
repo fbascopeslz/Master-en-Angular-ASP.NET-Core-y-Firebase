@@ -42,7 +42,7 @@ export class InputComponent implements OnInit, ControlValueAccessor {
   }
 
   registerOnTouched(fn: any): void {
-    this.propagateChange = fn;
+    this.propagateTouched = fn;
   }
   
   setDisabledState?(isDisabled: boolean): void {

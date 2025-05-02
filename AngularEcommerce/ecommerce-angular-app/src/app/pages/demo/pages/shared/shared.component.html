@@ -1,6 +1,11 @@
 <h2>Angular Forms</h2>
 
-<app-button (click)="onPatchValue()">Add text</app-button>
 <form [formGroup]="form" novalidate autocomplete="off" (ngSubmit)="onSubmit()">
-    <app-input formControlName="input"></app-input>
+    <app-button (click)="organizeElement()">Organize</app-button>
+    <app-button (click)="onPatchValue()">Add text</app-button>
+    <br>
+    <br>
+    <app-form-field label="Input Fernando" [required]="true" [control]="form.controls['myInput']" [isInline]="isInline">
+        <app-input formControlName="myInput"></app-input>
+    </app-form-field>
 </form>
