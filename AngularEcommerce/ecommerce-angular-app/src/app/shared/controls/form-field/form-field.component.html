@@ -13,7 +13,10 @@
                 <span *ngSwitchCase="'requiredtrue'">This input text is required</span>
                 <span *ngSwitchCase="'minlength'">Minimum number of characters  {{ control.errors ? control.errors[errorKey].requiredLength : 0}}</span>
                 <span *ngSwitchCase="'maxlength'">Maximum number of characters  {{ control.errors ? control.errors[errorKey].requiredLength : 0}}</span>
-                <span *ngSwitchCase="'pattern'"></span>
+                <span *ngSwitchCase="'pattern'">
+                    <span *ngIf="patternError">{{ patternError }}</span>
+                    <span *ngIf="!patternError">The regular expresion has no match</span>
+                </span>
             </ng-container>
         </div>
     </div>

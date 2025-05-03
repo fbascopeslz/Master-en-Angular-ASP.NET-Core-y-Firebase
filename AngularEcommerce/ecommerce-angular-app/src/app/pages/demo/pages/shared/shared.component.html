@@ -5,7 +5,13 @@
     <app-button (click)="onPatchValue()">Add text</app-button>
     <br>
     <br>
-    <app-form-field label="Input Fernando" [required]="true" [control]="form.controls['myInput']" [isInline]="isInline">
+    <app-form-field 
+        label="Input Fernando" 
+        [required]="true" 
+        [control]="form.controls['myInput']" 
+        [isInline]="isInline" 
+        [patternError]="regexError.number"
+    >
         <app-input formControlName="myInput"></app-input>
     </app-form-field>
 </form>
